@@ -26,3 +26,7 @@ eureka:
      json:
       trusted:
        packages: kafka
+       
+  app:
+   topic:
+    tofasttopic: tofasttopic
