@@ -2,24 +2,24 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: CustomerService
-        uri: CustomerService
+      - id: customerService
+        uri: lb://CustomerService
         predicates:
         - Path=/customers/**
-      - id: BookCommandService
-        uri: BookService
+      - id: bookCommandService
+        uri: lb://BookService
         predicates:
         - Path=/books/**
-      - id: BookQueriesService
-        uri: BookQueryService
+      - id: bookQueriesService
+        uri: lb://BookQueryService
         predicates:
           - Path=/view/book/**
-      - id: BorrowingService
-        uri: BorrowingService
+      - id: borrowingService
+        uri: lb://BorrowingService
         predicates:
           - Path=/borrowings/**
-      - id: ReviewService
-        uri: ReviewService
+      - id: reviewService
+        uri: lb://ReviewService
         predicates:
           - Path=/reviews/**
 
