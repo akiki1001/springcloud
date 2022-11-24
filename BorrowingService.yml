@@ -5,6 +5,11 @@ spring:
       host: localhost
       port: 27017
       database: librarySystemDb
+  zipkin:
+    base-url: http://localhost:9411/
+sleuth:
+  sampler:
+    probability: 1
 
 eureka:
   client:
